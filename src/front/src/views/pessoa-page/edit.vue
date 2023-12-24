@@ -46,6 +46,7 @@ const pessoa = reactive({
     endereco : []
 });
 
+    
 const endereco = reactive({
         logradouro: "",
         numero: "",
