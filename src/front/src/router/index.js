@@ -28,6 +28,7 @@ const router = createRouter({
 	routes,
 })
 
+
 router.beforeEach((to, from, next) => {
 	if (to.name !== 'Login-Page' && !getToken()) {
 		next({ name: 'Login-Page' });
@@ -36,9 +37,11 @@ router.beforeEach((to, from, next) => {
 	}
 });
 
+
 router.afterEach((to) => {
 	// Muda o título da aba com base na rota atual
 	document.title = to.meta.title || 'Título Padrão';
 });
+
 
 export default router;
